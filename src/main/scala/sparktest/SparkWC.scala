@@ -15,6 +15,7 @@ object SparkWC {
 
         //上下文对象
         val sc = new SparkContext(conf)
+        sc.addJar("/Users/rikka/myjar/myspark.jar")
 
 
         //读取数据
