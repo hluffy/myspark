@@ -81,7 +81,10 @@ object SpaceRDDTest {
         //reduceByKey
 
         //按value的降序排序
-        println(rdd13.reduceByKey(_+_).sortBy(_._2,false).collect().toBuffer)
+        val res12 = rdd13.reduceByKey(_+_).sortBy(_._2,false)
+        println(res12.collect.toBuffer)
+        val res13 = rdd13.reduceByKey(_+_).map(t => (t._2,t._1)).sortByKey(false).map(t => (t._2,t._1))
+        println(res13.collect.toBuffer)
 
         //笛卡尔积
         println((rdd11 cartesian rdd12).collect.toBuffer)
