@@ -11,7 +11,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object SparkWC {
     def main(args: Array[String]): Unit = {
         //配置信息类
-        val conf = new SparkConf().setAppName("SparkWC")//.setMaster("local")
+        val conf = new SparkConf().setAppName("SparkWC").setMaster("local[*]")
 
         //上下文对象
         val sc = new SparkContext(conf)
@@ -26,9 +26,9 @@ object SparkWC {
         val reduced: RDD[(String, Int)] = paired.reduceByKey(_+_)
         val res: RDD[(String, Int)] = reduced.sortBy(_._2,false)
 
-        res.saveAsTextFile(args(1))
+//        res.saveAsTextFile(args(1))
 
-//        println(res.collect().toBuffer)
+        println(res.collect().toBuffer)
 
     }
 

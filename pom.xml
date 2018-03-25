@@ -20,7 +20,7 @@
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.10</artifactId>
+            <artifactId>spark-core_2.11</artifactId>
             <version>2.2.0</version>
         </dependency>
 
@@ -31,6 +31,15 @@
             <artifactId>hadoop-client</artifactId>
             <version>2.7.3</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.scala-lang.modules/scala-xml -->
+        <dependency>
+            <groupId>org.scala-lang.modules</groupId>
+            <artifactId>scala-xml_2.11</artifactId>
+            <version>1.0.6</version>
+        </dependency>
+
+
 
         <!--<dependency>-->
             <!--<groupId>org.apache.spark</groupId>-->
