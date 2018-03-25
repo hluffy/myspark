@@ -5,6 +5,8 @@ import org.apache.spark.{SparkConf, SparkContext}
 /**
   * 自定义二次排序
   */
+
+//第一种排序方式
 object MySort{
     implicit val girlOrdering = new Ordering[Girl]{
         override def compare(x: Girl, y: Girl): Int = {
