@@ -5,7 +5,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 /**
   * spark常用算子练习
   */
-object SpaceRDDTest {
+object SparkRDDTest {
     def main(args: Array[String]): Unit = {
         val conf = new SparkConf().setAppName("SparkRDDTest").setMaster("local")
         val sc = new SparkContext(conf)
